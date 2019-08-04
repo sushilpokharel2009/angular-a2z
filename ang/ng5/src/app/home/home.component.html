@@ -1,0 +1,76 @@
+<div class="container">
+  <mat-card *ngIf="showingLogin" [style.width]="'300px'">
+    <mat-card-title>Sign Up</mat-card-title>
+    <mat-card-content>
+      <table [formGroup]="signupForm">
+        <tr>
+          <td>
+            <mat-form-field>
+              <input type="text" matInput class="form-control" formControlName="_name" placeholder="Full Name" />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input type="email" matInput class="form-control" formControlName="_email" placeholder="Email" />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input type="password" matInput class="form-control" formControlName="_password" placeholder="Password" />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button mat-raised-button color="primary" (click)="signUp()">Sign Up</button>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions>
+      <p (click)="showLogin()">Already Have Accoutn? Plz Sign In</p>
+    </mat-card-actions>
+  </mat-card>
+
+  <!-- **************** -->
+  <mat-card *ngIf="!showingLogin" [style.width]="'300px'">
+    <mat-card-title>Log In</mat-card-title>
+    <mat-card-content>
+      <table [formGroup]="loginForm">
+        <tr>
+          <td>
+            <mat-form-field>
+              <input type="text" matInput class="form-control" formControlName="_name" placeholder="Full Name">
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input type="email" matInput class="form-control" formControlName="_email" placeholder="Email">
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input matInput type="password" class="form-control" formControlName="_password" placeholder="Password">
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions>
+      <p (click)="showLogin()">If you don't have accout, please sign up.</p>
+    </mat-card-actions>
+  </mat-card>
+</div>

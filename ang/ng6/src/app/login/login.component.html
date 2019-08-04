@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <Form action [formGroup]="personForm">
+        <div class="form-group">
+          <input
+            [ngClass]="{'border-color': personForm.get('fName').invalid && personForm.get('fName').touched ? true : false}"
+            type="text" class="form-control" name="fName" formControlName="first" placeholder="First Name"
+            id="firstName" />
+        </div>
+        <div
+          *ngIf="personForm.get('fName').invalid && personForm.get('fName').touched && personForm.get('fName').value.length > 0">
+          <p *ngIf="personForm.get('fName').hasError('required')">Value required</p>
+          <p *ngIf="personForm.get('fName').hasError('maxlength')">Max 6 characters only</p>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="lName" formControlName="last" placeholder="Last Name"
+            id="lastName" />
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" formControlName="email" placeholder="Email"
+            id="email" />
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" name="phone" formControlName="num" placeholder="Phone"
+            id="phoneN" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="addr" formControlName="address" placeholder="Address"
+            id="address" />
+        </div>
+        <div class="form-group">
+
+          <button mat-raised-button [color]="'primary'">Primary</button>
+          <button mat-raised-button [color]="'warn'">Accent</button>
+        </div>
+      </Form>
+    </div>
+  </div>
+</body>
+
+</html>

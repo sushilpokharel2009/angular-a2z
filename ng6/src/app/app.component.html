@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+
+    </div>
+  </div>
+  <div>
+    <mat-toolbar [color]="'warn'">
+      <mat-toolbar-row>
+        <ul>
+          <li><a href="#">KANTIPUR</a></li>
+          <li>
+            <a routerLink="./login" routerLinkActive="active-link">Login</a>
+          </li>
+          <li>
+            <a routerLink="./register" routerLinkActive="active-link">Register</a>
+          </li>
+        </ul>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+  <router-outlet></router-outlet>
+</body>
+
+</html>

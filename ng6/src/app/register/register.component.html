@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <Form [formGroup]="personForm_">
+        <mat-form-field>
+          <input matInput type="text" class="form-control" name="fName" formControlName="first" placeholder="First Name"
+            id="firstName" />
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput type="text" class="form-control" name="lName" formControlName="last" placeholder="Last Name"
+            id="lastName" />
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput type="email" class="form-control" name="email" formControlName="email" placeholder="Email"
+            id="email" />
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput type="number" class="form-control" name="phone" formControlName="num" placeholder="Phone"
+            id="phoneN" />
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput type="text" class="form-control" name="addr" formControlName="address" placeholder="Address"
+            id="address" />
+        </mat-form-field><br>
+        <div class="form-group">
+
+          <button mat-raised-button [color]="'primary'" (click)="submit()">Submit</button>
+          <button mat-raised-button [color]="'warn'" (click)="reset()">Reset</button>
+        </div>
+      </Form>
+    </div>
+  </div>
+</body>
+
+</html>

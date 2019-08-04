@@ -1,0 +1,74 @@
+<mat-card *ngIf="showingLogin" [style.width]="'300px'">
+  <mat-card-title>
+    Sign up here..
+  </mat-card-title>
+  <mat-card-content>
+    <table [formGroup]="signUpForm">
+      <tr>
+        <td>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Enter email" formControlName="name" />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Enter password" formControlName="password" />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Confirm password" formControlName="confirmPassword" />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button mat-raised-button color="primary" (click)="signUp()">
+            Sign up
+          </button>
+        </td>
+      </tr>
+    </table>
+  </mat-card-content>
+  <mat-card-actions>
+    <p (click)="showLogin()">Already have an account?? Please sign in</p>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card *ngIf="!showingLogin" [style.width]="'300px'">
+  <mat-card-title>
+    Log in here..
+  </mat-card-title>
+  <mat-card-content>
+    <table [formGroup]="signInForm">
+      <tr>
+        <td>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Enter email" formControlName="name" />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Enter password" formControlName="password" />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button mat-raised-button color="primary" (click)="login()">
+            Sign In
+          </button>
+        </td>
+      </tr>
+    </table>
+  </mat-card-content>
+  <mat-card-actions>
+    <p (click)="showLogin()">Dont have an account?? Please sign up</p>
+  </mat-card-actions>
+</mat-card>

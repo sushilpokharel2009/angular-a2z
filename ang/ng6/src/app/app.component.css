@@ -1,0 +1,19 @@
+ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  /* background: skyblue; */
+}
+
+li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+a {
+  display: block;
+  padding: 5px;
+  border-right: 1px solid #ffff;
+  text-decoration: none;
+  color: #ffff;
+}

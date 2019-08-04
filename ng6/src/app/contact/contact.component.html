@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <Form [formGroup]="personForm_">
+        <div class="form-group">
+          <input type="text" class="form-control" name="fName" formControlName="first" placeholder="First Name"
+            id="firstName">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="lName" formControlName="last" placeholder="Last Name"
+            id="lastName">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" formControlName="email" placeholder="Email" id="email">
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" name="phone" formControlName="num" placeholder="Phone" id="phoneN">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="addr" formControlName="address" placeholder="Address"
+            id="address">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" (click)="submit()">Submit</button>
+          <button class="btn btn-secondary" (click)="reset()">Reset</button>
+        </div>
+      </Form>
+    </div>
+  </div>
+</body>
+
+</html>
